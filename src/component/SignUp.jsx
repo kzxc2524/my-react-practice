@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const SignUp = ({ formValue, formValueChange }) => {
+const SignUp = ({ formValue, formValueChange, formSubmit }) => {
     return(
-        <form>
+        <form onSubmit={formSubmit}>
             <div>
                 <label htmlFor="userNm"> {/*for 대신 htmlFor */}
                     <span>이름</span>
@@ -24,6 +24,7 @@ const SignUp = ({ formValue, formValueChange }) => {
                     <input type="password" id="userPwAgain" name="userPwAgain" value={formValue.userPwAgain} onChange={formValueChange} />
                 </label>
             </div>
+            <input type="submit" value="작성완료"/>
         </form>
     );
 }
